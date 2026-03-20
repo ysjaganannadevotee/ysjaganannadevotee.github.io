@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YS Jagananna Devotee</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1d5fa2, #2ba37a);
+    color: white;
+}
+
+/* Pages */
+.page {
+    display: none;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.active {
+    display: flex;
+}
+
+/* Card */
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease;
+}
+
+/* Logo */
+.logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(255,255,255,0.8);
+    margin-bottom: 15px;
+    animation: pulse 2s infinite;
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 220px;
+    margin: 12px auto;
+    padding: 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.instagram { background: linear-gradient(45deg, #feda75, #d62976); }
+.youtube { background: red; }
+.twitter { background: black; }
+.telegram { background: #0088cc; }
+.more { background: #444; }
+
+/* Images */
+.gallery img {
+    width: 90%;
+    max-width: 320px;
+    border-radius: 20px;
+    margin: 10px 0;
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+/* Buttons */
+.back {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+}
+
+.music-btn {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    background: linear-gradient(45deg, #feda75, #d62976);
+    color: white;
+}
+
+/* Heading */
+h2 {
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1;}
+}
+
+@keyframes pulse {
+    0% {box-shadow: 0 0 10px white;}
+    50% {box-shadow: 0 0 30px white;}
+    100% {box-shadow: 0 0 10px white;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+    <div class="card">
+        <img src="https://i.ibb.co/n2dH5tF/IMG-20260319-162114.png" class="logo">
+
+        <h2>@ysjagananna__devotee</h2>
+        <p>Dedicated to YS Jagananna 💙</p>
+
+        <a class="btn instagram" href="https://www.instagram.com/ysjagananna__devotee" target="_blank">📸 Instagram</a>
+
+        <a class="btn youtube" href="#" target="_blank">▶ YouTube</a>
+
+        <a class="btn twitter" href="https://x.com/ysjagan_D_votee" target="_blank">🐦 Twitter (X)</a>
+
+        <a class="btn telegram" href="https://t.me/Ysjagananna_devotee" target="_blank">📢 Telegram</a>
+
+        <button class="btn more" onclick="showPage('info')">ℹ More Info</button>
+    </div>
+</div>
+
+<!-- MORE INFO PAGE -->
+<div id="info" class="page">
+    <div class="card">
+
+        <h1>YS JAGAN MOHAN REDDY 💙</h1>
+
+        <!-- MUSIC -->
+        <audio id="bgMusic" loop>
+            <source src="https://files.catbox.moe/y3aer9.mp3" type="audio/mp3">
+        </audio>
+
+        <button class="music-btn" onclick="toggleMusic()">⏸ Pause Music</button>
+
+        <!-- IMAGES -->
+        <div class="gallery">
+            <img src="https://i.postimg.cc/HjtnPK6V/IMG-20260310-083456-282.jpg">
+            <img src="https://i.postimg.cc/Thxh0GJp/IMG-20260313-083117-173.jpg">
+            <img src="https://i.postimg.cc/JtQ0dgpz/IMG-20260313-122951-992.jpg">
+            <img src="https://i.postimg.cc/23xyXJ05/IMG-20260314-193831-606.webp">
+            <img src="https://i.postimg.cc/z3kvPMx8/IMG-20260316-085857-448.jpg">
+            <img src="https://i.postimg.cc/jCh2k9MK/IMG-20260317-005145-075.jpg">
+            <img src="https://i.postimg.cc/64ckLCLv/IMG-20260317-005145-150.jpg">
+            <img src="https://i.postimg.cc/mh4hjRyP/IMG-20260317-010254-118.webp">
+        </div>
+
+        <p>
+        YS Jagan Mohan Reddy is a visionary leader dedicated to public welfare and development. 
+        Through transformative governance and impactful schemes, he has improved the lives of millions. 
+        💙 With a strong vision for 2029, he aims to return as Chief Minister and continue building a progressive and prosperous future.
+        </p>
+
+        <!-- CHANNELS -->
+        <h2>📢 Follow Our Channels</h2>
+
+        <a class="btn instagram" href="https://www.instagram.com/ysjagananna__devotee" target="_blank">📸 Instagram Page</a>
+
+        <a class="btn youtube" href="#" target="_blank">▶️ YouTube Channel</a>
+
+        <a class="btn twitter" href="https://x.com/ysjagan_D_votee" target="_blank">🐦 Twitter (X)</a>
+
+        <a class="btn telegram" href="https://t.me/Ysjagananna_devotee" target="_blank">📢 Telegram Channel</a>
+
+        <button class="back" onclick="showPage('home')">← Back</button>
+    </div>
+</div>
+
+<script>
+let musicStarted = false;
+
+function showPage(page) {
+    document.getElementById("home").classList.remove("active");
+    document.getElementById("info").classList.remove("active");
+    document.getElementById(page).classList.add("active");
+
+    let music = document.getElementById("bgMusic");
+
+    if (page === "info" && !musicStarted) {
+        music.play();
+        musicStarted = true;
+    }
+
+    if (page === "home") {
+        music.pause();
+        music.currentTime = 0;
+        musicStarted = false;
+    }
+}
+
+function toggleMusic() {
+    let music = document.getElementById("bgMusic");
+    let btn = document.querySelector(".music-btn");
+
+    if (music.paused) {
+        music.play();
+        btn.innerText = "⏸ Pause Music";
+    } else {
+        music.pause();
+        btn.innerText = "▶ Play Music";
+    }
+}
+</script>
+
+</body>
+</html>
